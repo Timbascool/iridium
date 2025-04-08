@@ -21,6 +21,7 @@ import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockType;
 import org.bukkit.entity.Item;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
@@ -517,6 +518,22 @@ public class ItemManager {
         meta.getEquippable().setSlot(slot);
 
         return item;
+    }
+
+    public boolean isInventoryFull(Player p)
+    {
+        return p.getInventory().firstEmpty() == -1;
+    }
+
+    public void harvestItem(Block block, ItemStack item, Player p){
+        if(isInventoryFull(p)){
+            dropItemOnBlock(block, item);
+        }
+        else{
+            p.getInventory().addItem(item);
+        }
+        p.playSound(block.getLocation(),Sound.BLOCK_CROP_BREAK,SoundCategory.BLOCKS,1,1);
+        block.getWorld().spawnParticle(Particle.BLOCK,block.getLocation().add(0.5,0.5,0.5),5,0.2,0.2,0.2, block.getBlockData());
     }
 
     public void dropItemOnItem(Item item, ItemStack itemStack){

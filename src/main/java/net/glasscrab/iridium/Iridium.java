@@ -27,12 +27,14 @@ public final class Iridium extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new PlayerSquishEvent(),this);
         this.getServer().getPluginManager().registerEvents(new CropGrowEvent(new BlockManager(this, new ItemManager(this)), new RNGManager(), this),this);
         this.getServer().getPluginManager().registerEvents(new BreakCropEvent(new BlockManager(this, new ItemManager(this)), new ItemManager(this) ,new RNGManager(), this), this);
+        this.getServer().getPluginManager().registerEvents(new IridiumHoeUseEvent(new BlockManager(this, new ItemManager(this)), new ItemManager(this) ,new RNGManager(), this), this);
         this.getServer().getPluginManager().registerEvents(new SeedPlaceEvent(new ItemManager(this),this),this);
         this.getServer().getPluginManager().registerEvents(new CropTrampleEvent(),this);
         this.getServer().getPluginManager().registerEvents(new PlayerBonemealCropEvent(new BlockManager(this, new ItemManager(this)),new RNGManager(),this),this);
         this.getServer().getPluginManager().registerEvents(new MiscMobDrops(new RNGManager()), this);
         this.getServer().getPluginManager().registerEvents(new BreakerPushEvent(),this);
         this.getServer().getPluginManager().registerEvents(new BlockGenerateEvent(this),this);
+        //this.getServer().getPluginManager().registerEvents(new PlacerDropEvent(this),this);
 
         this.getCommand("togglerat").setExecutor(new ToggleRatCommand());
 
@@ -90,6 +92,7 @@ public final class Iridium extends JavaPlugin {
         Bukkit.addRecipe(mr.CobwebShapedRecipe());
         Bukkit.addRecipe(mr.CalciteFurnaceRecipe());
         Bukkit.addRecipe(mr.TuffFurnaceRecipe());
+        Bukkit.addRecipe(mr.DarkPrismarineFurnaceRecipe());
 
 
 

@@ -6,6 +6,7 @@ C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\farming\Brea
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\farming\CropGrowEvent.java
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\farming\CropTrampleEvent.java
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\farming\FarmingRecipes.java
+C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\farming\IridiumHoeUseEvent.java
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\farming\PlayerBonemealCropEvent.java
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\farming\SeedPlaceEvent.java
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\Iridium.java
@@ -19,5 +20,6 @@ C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\MiscRecipes.
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\NetheriteRecipes.java
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\opal\OpalDropEvent.java
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\opal\OpalRecipies.java
+C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\PlacerDropEvent.java
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\PlayerSquishEvent.java
 C:\Users\super\IntelliJ\iridium\src\main\java\net\glasscrab\iridium\RNGManager.java

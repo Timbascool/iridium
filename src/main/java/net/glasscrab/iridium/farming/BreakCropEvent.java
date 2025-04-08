@@ -32,18 +32,13 @@ public class BreakCropEvent implements Listener {
     
     @EventHandler
     public void OnBreakCrop(BlockDropItemEvent e){
-        //e.getPlayer().sendMessage(Component.text("thing broken"));
-        //e.getPlayer().sendMessage(Component.text(e.getBlockState()+""));
         if(!blockManager.isCustomCrop(e.getBlockState().getType())) return;
         if(e.getPlayer().getGameMode() == GameMode.CREATIVE) return;
-        //e.getPlayer().sendMessage(Component.text("plant broken"));
         BlockState state = e.getBlockState();
         BlockData data = state.getBlockData();
         Ageable age = (Ageable) data;
 
         e.getItems().clear();
-
-        //e.getPlayer().sendMessage(Component.text(age.getAge()));
 
 
 

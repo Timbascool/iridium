@@ -93,4 +93,10 @@ public class MiscRecipes {
         FurnaceRecipe recipe = new FurnaceRecipe(key, new ItemStack(Material.TUFF), new RecipeChoice.MaterialChoice(Material.ANDESITE),1f,200);
         return recipe;
     }
+
+    public FurnaceRecipe DarkPrismarineFurnaceRecipe(){
+        NamespacedKey key = new NamespacedKey(plugin, "dark_prismarine");
+        FurnaceRecipe recipe = new FurnaceRecipe(key, new ItemStack(Material.DARK_PRISMARINE), new RecipeChoice.MaterialChoice(Material.PRISMARINE_BRICKS),1f,200);
+        return recipe;
+    }
 }

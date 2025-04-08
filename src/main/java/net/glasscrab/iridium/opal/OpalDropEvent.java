@@ -33,6 +33,7 @@ public class OpalDropEvent implements Listener {
         if(rngManager.jackpot(150)){
             itemManager.dropItemOnItem(e.getItems().getFirst(),itemManager.makeBasicItem("Charged Opal", new NamespacedKey("opal", "charged_opal"), ItemRarity.COMMON));
             e.getPlayer().getWorld().spawnParticle(Particle.TRIAL_SPAWNER_DETECTION_OMINOUS,e.getBlock().getLocation().add(0.5,0.5,0.5),10,0.5,0.5,0.5,0.2);
+            //e.getPlayer().sendMessage(Component.text("You unearthed a Charged Opal!").color(TextColor.color(0, 253, 255)));
             Bukkit.broadcast(Component.text(e.getPlayer().getName()+" unearthed a Charged Opal!").color(TextColor.color(0, 253, 255)));
         }
     }
