@@ -168,6 +168,21 @@ public class IridiumHoeUseEvent implements Listener {
                         break;
                 }
                 break;
+            case NETHER_WART:
+                switch (age.getAge()){
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        itemManager.harvestItem(e.getClickedBlock(),new ItemStack(Material.NETHER_WART,rngManager.random(1)),e.getPlayer());
+                        itemManager.harvestItem(e.getClickedBlock(),new ItemStack(Material.NETHER_WART,1),e.getPlayer());
+                        age.setAge(age.getAge()-3);
+                        break;
+                }
+                break;
         }
 
         new BukkitRunnable() {

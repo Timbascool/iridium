@@ -29,6 +29,8 @@ public class BlockManager {
         crops.add(Material.WHEAT);
         crops.add(Material.CARROTS);
         crops.add(Material.POTATOES);
+        crops.add(Material.BEETROOTS);
+        crops.add(Material.NETHER_WART);
 
         return crops.contains(type);
     }
