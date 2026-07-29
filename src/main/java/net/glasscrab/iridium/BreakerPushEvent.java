@@ -2,6 +2,8 @@ package net.glasscrab.iridium;
 
 import io.papermc.paper.datacomponent.DataComponentTypes;
 import io.papermc.paper.datacomponent.item.ItemEnchantments;
+import net.kyori.adventure.text.Component;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Tag;
 import org.bukkit.block.Block;
@@ -35,10 +37,11 @@ public class BreakerPushEvent implements Listener {
 
     @EventHandler
     public void onBreakerPush(BlockPistonExtendEvent e){
-        if(e.getBlocks().isEmpty()) return;
+        var blocks = e.getBlocks();
+        if(blocks.isEmpty()) return;
 
         Block piston = e.getBlock();
-        Block first = e.getBlocks().getFirst();
+        Block first = blocks.getFirst();
 
         if (!Tag.CHAINS.isTagged(first.getType()) && first.getType() != Material.END_ROD) return;
 
@@ -47,8 +50,8 @@ public class BreakerPushEvent implements Listener {
         boolean cancelEvent = false;
 
         // Break block right in front of chain
-        if (e.getBlocks().size() > 1) {
-            brokenBlock = e.getBlocks().get(1);
+        if (blocks.size() > 1 && !blocks.get(1).isLiquid()) {
+            brokenBlock = blocks.get(1);
             cancelEvent = true;
         }
         // Break block with gap
@@ -62,7 +65,6 @@ public class BreakerPushEvent implements Listener {
         if (brokenBlock.getType().getHardness() >= 50) return;
 
         // Iron chains transform (when transforming doesn't break), End rods have silk touch and copper chains break normally
-
         if (first.getType() == Material.IRON_CHAIN &&
                 blockTransformations.containsKey(brokenBlock.getType()))
         {
